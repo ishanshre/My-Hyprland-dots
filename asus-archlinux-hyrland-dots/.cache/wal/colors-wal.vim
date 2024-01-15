@@ -1,0 +1,23 @@
+" Special
+let wallpaper  = "/home/ishan/Pictures/wallpapers/Lofi-Urban-Nightscape.png"
+let background = "#05870A"
+let foreground = "#8fd4d3"
+let cursor     = "#8fd4d3"
+
+" Colors
+let color0  = "#05870A"
+let color1  = "#5D5752"
+let color2  = "#8AD072"
+let color3  = "#0A9B50"
+let color4  = "#156965"
+let color5  = "#2D6B69"
+let color6  = "#103D99"
+let color7  = "#8fd4d3"
+let color8  = "#649493"
+let color9  = "#5D5752"
+let color10 = "#8AD072"
+let color11 = "#0A9B50"
+let color12 = "#156965"
+let color13 = "#2D6B69"
+let color14 = "#103D99"
+let color15 = "#8fd4d3"

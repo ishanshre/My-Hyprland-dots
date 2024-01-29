@@ -1,0 +1,21 @@
+set $wallpaper /home/ishan/Pictures/wallpapers/Lake.jpg
+
+set $background #0a080b
+set $foreground #cdbfdd
+
+set $color0 #0a080b
+set $color1 #513A85
+set $color2 #6F5A94
+set $color3 #9B6EA5
+set $color4 #C87BA1
+set $color5 #B187BC
+set $color6 #D68EB4
+set $color7 #cdbfdd
+set $color8 #8f859a
+set $color9 #513A85
+set $color10 #6F5A94
+set $color11 #9B6EA5
+set $color12 #C87BA1
+set $color13 #B187BC
+set $color14 #D68EB4
+set $color15 #cdbfdd

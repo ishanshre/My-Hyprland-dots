@@ -1,0 +1,23 @@
+" Special
+let wallpaper  = "/home/ishan/Pictures/wallpapers/Lake.jpg"
+let background = "#0a080b"
+let foreground = "#cdbfdd"
+let cursor     = "#cdbfdd"
+
+" Colors
+let color0  = "#0a080b"
+let color1  = "#513A85"
+let color2  = "#6F5A94"
+let color3  = "#9B6EA5"
+let color4  = "#C87BA1"
+let color5  = "#B187BC"
+let color6  = "#D68EB4"
+let color7  = "#cdbfdd"
+let color8  = "#8f859a"
+let color9  = "#513A85"
+let color10 = "#6F5A94"
+let color11 = "#9B6EA5"
+let color12 = "#C87BA1"
+let color13 = "#B187BC"
+let color14 = "#D68EB4"
+let color15 = "#cdbfdd"

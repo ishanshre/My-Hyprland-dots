@@ -2,55 +2,50 @@
     // HYPRLAND WORKSPACES. CHOOSE as desired and place on waybar configs
     // CIRCLES Style
     "hyprland/workspaces": {
-        "active-only": false,
-        "all-outputs": true, 
         "format": "{icon}",
-        "show-special": false,
         "on-click": "activate",
-        "on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1",
-        "persistent-workspaces": {
-          "1": [],
-          "2": [],
-          "3": [],
-          "4": [],
-          "5": [],
-        },
         "format-icons": {
+          "1": "",
+          "2": "",
+          "3": "",
+          "4": "",
+          "5": "",
+          "urgent": "",
           "active": "",
-          "default": "",
-        },  
+          "default": ""
+        },
+        "sort-by-number": true,
+        "all-outputs": false,
+        "active-only": true
     },
     
-    // ROMAN Numerals style
     "hyprland/workspaces#roman": {
-        "active-only":false,
+        "active-only": true,
         "all-outputs": true,
         "format": "{icon}",
         "show-special": false,
         "on-click": "activate",
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1",
-        "persistent-workspaces":{
+        "persistent-workspaces": {
             "1": [],
             "2": [],
             "3": [],
             "4": [],
-            "5": [],
+            "5": []
         },
         "format-icons": {
-          "1": "I",
-          "2": "II",
-          "3": "III",
-          "4": "IV",
-          "5": "V",
-          "6": "VI",
-          "7": "VII",
-          "8": "VIII",
-          "9": "IX",
-          "10": "X",
-          
-        },
+            "1": "I",
+            "2": "II",
+            "3": "III",
+            "4": "IV",
+            "5": "V",
+            "6": "VI",
+            "7": "VII",
+            "8": "VIII",
+            "9": "IX",
+            "10": "X"
+        }
     },
     
     // PACMAN Style
@@ -102,16 +97,14 @@
         }
     },
       
-    //  NUMBERS and ICONS style
     "hyprland/workspaces#4": {
         "format": "{name}",
-        "format": "{name}{icon}",
-        //"format": " {icon} ",
         "show-special": false,
         "on-click": "activate",
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1",
-        "all-outputs": true,
+        "all-outputs": false,
+        "active-only": true,
         "sort-by-number": true,
         "format-icons": {
           "0": "",
@@ -126,19 +119,7 @@
           "9": "",
           "focused": "",
           "default": ""
-        },
-        // "persistent-workspaces":{
-        //     "1": "",
-        //     "2": "",
-        //     "3": "",
-        //     "4": "",
-        //     "5": "",
-        //     "6": "",
-        //     "7": "",
-        //     "8": "",
-        //     "9": "",
-        //     "10": ""
-        // }
+        }
     },
      
     // GROUP
@@ -255,7 +236,7 @@
     },
        
     "cpu": {
-        "format": "{usage}% 󰍛",  
+        "format": "{icon0}{icon1}{icon2}{icon3} {usage:>2}% 󰍛",  
         "interval": 1,
         "format-alt-click": "click",
         "format-alt": "{icon0}{icon1}{icon2}{icon3} {usage:>2}% 󰍛",
@@ -503,9 +484,9 @@
     "custom/lock": {
         "format": " 󰌾 ",
         "exec": "echo ; echo 󰷛  screen lock",
-        "interval" : 86400, // once every day
+        "interval" : 86400, 
         "tooltip": true,
-        "on-click": "~/.config/hypr/scripts/LockScreen.sh",
+        "on-click": "hyprlock --immediate"
     },
         
     "custom/menu": {

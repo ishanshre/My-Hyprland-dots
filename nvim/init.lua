@@ -34,7 +34,7 @@ require('lazy').setup({
     require 'plugins.nvim_lspconfig',
     require 'plugins.confirm',
     require 'plugins.nvim_cmp',
-    require 'plugins.tokyonight',
+    require 'plugins.catppuccin',
     require 'plugins.comments',
     require 'plugins.mini',
     require 'plugins.treesetter',

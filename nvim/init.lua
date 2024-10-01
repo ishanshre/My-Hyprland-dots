@@ -49,6 +49,7 @@ require('lazy').setup({
     require 'plugins.lualine',
     require 'plugins.misc',
     require 'plugins.none-ls',
+    require 'plugins.venv_selector',
     --  require 'plugins.',
 }, {
     ui = {

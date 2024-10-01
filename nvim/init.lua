@@ -44,7 +44,7 @@ require('lazy').setup({
     require 'plugins.line',
     require 'plugins.autopairs',
     require 'plugins.avante',
-    require 'plugins.bufferline',
+    -- require 'plugins.bufferline',
     require 'plugins.lazygit',
     require 'plugins.lualine',
     require 'plugins.misc',

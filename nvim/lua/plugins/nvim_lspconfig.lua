@@ -52,12 +52,13 @@ return {
                     }
                 },
                 rust_analyzer = {},
+                tailwindcss = {}
                 -- Add more servers here as needed
             }
 
             -- Ensure the servers and tools are installed
             local ensure_installed = vim.tbl_keys(servers)
-            vim.list_extend(ensure_installed, {})  -- Add any additional tools here
+            vim.list_extend(ensure_installed, { "tailwindcss" }) -- Add any additional tools here
             mason_tool_installer.setup { ensure_installed = ensure_installed }
 
             mason_lspconfig.setup {

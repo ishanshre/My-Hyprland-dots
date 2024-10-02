@@ -1,0 +1,65 @@
+{
+	"include": "~/.config/waybar/modules",
+	"layer": "top",
+	//"mode": "dock",
+	"exclusive": true,
+	"passthrough": false,
+	"position": "top",
+	"spacing": 3,
+	"fixed-center": true,
+	"ipc": true,
+	"margin-top": 1,
+	"margin-bottom": 1,
+	"margin-left": 6,
+	"margin-right": 6,
+	
+	"modules-left": [
+		"clock",
+		"cpu",
+		"memory",
+		"temperature",
+		"backlight",
+		"custom/cava_mviz"
+		],
+	
+	"modules-center": [
+		"custom/menu",
+		"hyprland/workspaces#4",
+		"custom/lock"
+		], 
+	
+	"modules-right": [
+		"network#speed",
+		"battery",
+		"pulseaudio",
+		"pulseaudio#microphone",
+		"tray",
+		"custom/swaync",
+		"custom/power"
+		],
+	"pulseaudio/slider": {
+		"min": 0,
+		"max": 100,
+		"orientation": "horizontal"
+		
+	},
+
+	"custom/speaker": {
+		"exec": "echo '🔊'",  
+		"interval": 1,
+		"format": "{}"
+	},
+
+	"backlight/slider": {
+		"min": 0,
+		"max": 100,
+		"orientation": "horizontal",
+		"device": "intel_backlight"
+	},
+
+	"custom/backlight": {
+		"exec": "echo '✨'",  
+		"interval": 1,
+		"format": "{}"
+	}
+}

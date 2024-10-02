@@ -43,7 +43,7 @@ require('lazy').setup({
     require 'plugins.lint',
     require 'plugins.line',
     require 'plugins.autopairs',
-    require 'plugins.avante',
+    -- require 'plugins.avante',
     require 'plugins.bufferline',
     require 'plugins.lazygit',
     require 'plugins.lualine',

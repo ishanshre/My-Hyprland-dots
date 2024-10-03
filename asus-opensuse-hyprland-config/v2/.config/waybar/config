@@ -34,7 +34,6 @@
 		"pulseaudio",
 		"pulseaudio#microphone",
 		"tray",
-		"custom/swaync",
 		"custom/power"
 		],
 	"pulseaudio/slider": {

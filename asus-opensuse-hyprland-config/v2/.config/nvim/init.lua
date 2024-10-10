@@ -50,6 +50,8 @@ require('lazy').setup({
     require 'plugins.misc',
     require 'plugins.none-ls',
     require 'plugins.venv_selector',
+    require 'plugins.iron',
+    require 'plugins.markdown-preview',
     --  require 'plugins.',
 }, {
     ui = {

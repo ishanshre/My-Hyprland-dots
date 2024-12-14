@@ -1,0 +1,7 @@
+[keys.normal]
+"0" = "move_to_line_start"  # Start of line
+"$" = "move_to_line_end"    # End of line
+"gg" = "move_to_document_start"  # Start of file
+"G" = "move_to_document_end"     # End of file
+"dd" = "delete_line"
+"yy" = "yank_line"

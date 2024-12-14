@@ -12,10 +12,19 @@ return {
     },
     opts = {
         filesystem = {
+            follow_current_file = true,
             window = {
                 mappings = {
                     ['\\'] = 'close_window',
                 },
+            },
+            filtered_items = {
+                visible = true, -- Show hidden files
+            },
+        },
+        default_component_configs = {
+            name = {
+                highlight_opened_files = true, -- Highlight files already opened in buffers
             },
         },
     },

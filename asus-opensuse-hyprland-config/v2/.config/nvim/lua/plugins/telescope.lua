@@ -1,5 +1,5 @@
 return {
-	{ -- Fuzzy Finder (files, lsp, etc)
+  { -- Fuzzy Finder (files, lsp, etc)
     'nvim-telescope/telescope.nvim',
     event = 'VimEnter',
     branch = '0.1.x',
@@ -21,7 +21,7 @@ return {
       { 'nvim-telescope/telescope-ui-select.nvim' },
 
       -- Useful for getting pretty icons, but requires a Nerd Font.
-      { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
+      { 'nvim-tree/nvim-web-devicons',            enabled = vim.g.have_nerd_font },
     },
     config = function()
       -- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -45,6 +45,17 @@ return {
 
       -- [[ Configure Telescope ]]
       -- See `:help telescope` and `:help telescope.setup()`
+      local border_color = "#5c6370"
+      vim.api.nvim_set_hl(0, 'FloatBorder', { fg = border_color, bg = 'none' })
+      vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
+
+      -- Optionally customize LSP floating windows
+      vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
+        border = 'rounded',
+      })
+      vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+        border = 'rounded',
+      })
       require('telescope').setup {
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
@@ -55,6 +66,14 @@ return {
         --   },
         -- },
         -- pickers = {}
+        defaults = {
+          borderchars = {
+            prompt = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
+            results = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
+            preview = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
+          },
+        },
+
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
@@ -103,4 +122,4 @@ return {
       end, { desc = '[S]earch [N]eovim files' })
     end,
   }
-  }
+}

@@ -1,0 +1,44 @@
+theme = "vim_dark_high_contrast"
+
+[editor]
+line-number = "relative"
+mouse = true
+auto-completion = true
+auto-info = true
+bufferline = "always"
+auto-format = true
+color-modes = true 
+popup-border = "all"
+indent-heuristic = "hybrid"
+cursorline = true
+cursorcolumn = true
+text-width = 100
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "register"]
+center = ["file-name", "total-line-numbers", "read-only-indicator"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+
+[editor.lsp]
+display-messages = true
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.gutters]
+layout = ["diff", "diagnostics", "line-numbers", "spacer"]

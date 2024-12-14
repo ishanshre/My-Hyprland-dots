@@ -1,12 +1,13 @@
 return {
 
-  { -- Linting
+  { -- Linting,
     'mfussenegger/nvim-lint',
     event = { 'BufReadPre', 'BufNewFile' },
     config = function()
       local lint = require 'lint'
       lint.linters_by_ft = {
-        markdown = { 'markdownlint' },
+        -- markdown = { 'markdownlint' },
+        python = { 'flake8' },
       }
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
@@ -48,9 +49,9 @@ return {
         group = lint_augroup,
         callback = function()
           lint.try_lint()
+          -- lint.try_lint('flake8')
         end,
       })
     end,
   },
 }
-

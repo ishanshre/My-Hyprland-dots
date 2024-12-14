@@ -2,6 +2,14 @@
 # /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # Keyhints. Idea got from Garuda Hyprland
 
+# GDK BACKEND. Change to either wayland or x11 if having issues
+BACKEND=wayland
+
+# Check if rofi is running and kill it if it is
+if pgrep -x "rofi" > /dev/null; then
+    pkill rofi
+fi
+
 # Detect monitor resolution and scale
 x_mon=$(hyprctl -j monitors | jq '.[] | select(.focused==true) | .width')
 y_mon=$(hyprctl -j monitors | jq '.[] | select(.focused==true) | .height')
@@ -28,7 +36,7 @@ dynamic_width=$(($dynamic_width > $max_width ? $max_width : $dynamic_width))
 dynamic_height=$(($dynamic_height > $max_height ? $max_height : $dynamic_height))
 
 # Launch yad with calculated width and height
-yad --width=$dynamic_width --height=$dynamic_height \
+GDK_BACKEND=$BACKEND yad --width=$dynamic_width --height=$dynamic_height \
     --center \
     --title="Keybindings" \
     --no-buttons \
@@ -40,6 +48,7 @@ yad --width=$dynamic_width --height=$dynamic_height \
 "ESC" "close this app" "" "=" "SUPER KEY (Windows Key)" "(SUPER KEY)" \
 " enter" "Terminal" "(kitty)" \
 " SHIFT enter" "DropDown Terminal" "(kitty-pyprland)" \
+" SHIFT K" "Searchable Keybinds" "(Keybinds)" \
 " A" "Desktop Overview" "(AGS Overview)" \
 " D" "App Launcher" "(rofi-wayland)" \
 " T" "Open File Manager" "(Thunar)" \

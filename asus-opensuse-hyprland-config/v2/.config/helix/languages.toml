@@ -1,0 +1,50 @@
+# Language Servers Configuration
+[language-server]
+tailwindcss-ls = { command = "tailwindcss-language-server", args = ["--stdio"] }
+bash-language-server = { command = "bash-language-server", args = ["start"] }
+docker-langserver = { command = "docker-langserver", args = ["--stdio"] }
+docker-compose-langserver = { command = "docker-compose-langserver", args = ["--stdio"] }
+vscode-css-language-server = { command = "vscode-css-language-server", args = ["--stdio"], config = { provideFormatter = true } }
+vscode-html-language-server = { command = "vscode-html-language-server", args = ["--stdio"], config = { provideFormatter = true } }
+vscode-json-language-server = { command = "vscode-json-language-server", args = ["--stdio"], config = { provideFormatter = true } }
+ruff-lsp = { command = "ruff-lsp" }
+pylsp = { command = "pylsp" }
+
+# Language Specific Configurations
+[[language]]
+name = "python"
+scope = "source.python"
+injection-regex = "py(thon)?"
+file-types = ["py", "pyi", "py3", "pyw", "ptl", "rpy", "cpy", "ipy", "pyt", { glob = ".python_history" }, { glob = ".pythonstartup" }, { glob = ".pythonrc" }, { glob = "SConstruct" }, { glob = "SConscript" }]
+shebangs = ["python"]
+roots = ["pyproject.toml", "setup.py", "poetry.lock", "pyrightconfig.json"]
+comment-token = "#"
+language-servers = ["ruff", "jedi", "pylsp"]
+# TODO: pyls needs utf-8 offsets
+indent = { tab-width = 4, unit = "    " }
+formatter = { command = "black", args = ["--quiet", "-"] }
+
+[[language]]
+name = "html"
+language-servers = ["vscode-html-language-server"]
+formatter = { command = "prettier", args = ["--parser", "html"] }
+
+[[language]]
+name = "css"
+language-servers = ["vscode-css-language-server"]
+formatter = { command = "prettier", args = ["--parser", "css"] }
+
+[[language]]
+name = "javascript"
+language-servers = ["typescript-language-server"]
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
+
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer"]
+formatter = { command = "rustfmt", args = ["--emit=stdout"] }
+
+[[language]]
+name = "json"
+language-servers = ["vscode-json-language-server"]
+formatter = { command = "prettier", args = ["--parser", "json"] }

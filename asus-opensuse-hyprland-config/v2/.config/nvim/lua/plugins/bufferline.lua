@@ -40,7 +40,7 @@ return {
                 show_tab_indicators = false,
                 indicator = {
                     -- icon = '▎', -- this should be omitted if indicator style is not 'icon'
-                    style = 'none', -- Options: 'icon', 'underline', 'none'
+                    style = 'underline', -- Options: 'icon', 'underline', 'none'
                 },
                 icon_pinned = '󰐃',
                 minimum_padding = 1,
@@ -50,15 +50,17 @@ return {
             },
             highlights = {
                 separator = {
-                    fg = '#434C5E',
+                    fg = '#ffffff',
                 },
                 buffer_selected = {
                     bold = true,
-                    italic = false,
+                    italic = true,
                 },
                 -- separator_selected = {},
                 -- tab_selected = {},
-                -- background = {},
+                background = {
+                    fg = "#ff00ff"
+                },
                 -- indicator_selected = {},
                 -- fill = {},
             },

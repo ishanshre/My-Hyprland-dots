@@ -26,7 +26,6 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
     -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
     require 'plugins.alpha',
-    require 'plugins.gitsigns',
     require 'plugins.whichkey',
     require 'plugins.telescope',
     require 'plugins.lazydev',
@@ -34,7 +33,7 @@ require('lazy').setup({
     require 'plugins.nvim_lspconfig',
     require 'plugins.confirm',
     require 'plugins.nvim_cmp',
-    require 'plugins.catppuccin',
+    require 'plugins.one_dark',
     require 'plugins.comments',
     require 'plugins.mini',
     require 'plugins.treesetter',
@@ -50,9 +49,8 @@ require('lazy').setup({
     require 'plugins.misc',
     require 'plugins.none-ls',
     require 'plugins.venv_selector',
-    require 'plugins.iron',
     require 'plugins.markdown-preview',
-    --  require 'plugins.',
+    require 'plugins.notify',
 }, {
     ui = {
         icons = vim.g.have_nerd_font and {} or {

@@ -1,19 +1,14 @@
-/** Basic config file **/
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Main Config 1080p */
 
-configuration{
-    modi: "run,drun,window";
-    icon-theme: "BeautyLine";
-    show-icons: true;
-    terminal: "terminal";
-    drun-display-format: "{icon} {name}";
-    location: 0;
-    disable-history: false;
-    hide-scrollbar: true;
-    display-drun: "   Apps ";
-    display-run: "   Run ";
-    display-window: " 﩯  Window";
-    display-Network: " 󰤨  Network";
-    sidebar-mode: true;
+@import "~/.config/rofi/master-config.rasi" 
+
+/* ---- Configuration ---- */
+configuration {
+	font: "Fira Code SemiBold 12";
 }
 
-@theme "/usr/share/rofi/themes/catppuccin-mocha.rasi"
+element-text {
+    font:	"Fira Code SemiBold 14";
+}
+

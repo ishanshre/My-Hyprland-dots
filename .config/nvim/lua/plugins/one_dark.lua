@@ -41,10 +41,6 @@ return {
                     Comment = { italic = true },
                     ErrorMsg = { italic = true, bold = true },
                 },
-                colors = {
-                    cursorline = "#FF0000" -- This is optional. The default cursorline color is based on the background
-                },
-
             })
         end,
     }

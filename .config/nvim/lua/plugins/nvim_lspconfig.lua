@@ -52,17 +52,55 @@ return {
                     }
                 },
                 rust_analyzer = {},
-                tailwindcss = {}
+                tailwindcss = {},
+                html = {
+                    settings = {
+                        html = {
+                            format = { wrapLineLength = 120, unformatted = "pre,code,textarea" },
+                            hover = { documentation = true, references = true },
+                        },
+                    },
+                },
+                cssls = {
+                    settings = {
+                        css = { validate = true },
+                        scss = { validate = true },
+                        less = { validate = true },
+                    },
+                },
+                emmet_ls = {
+                    filetypes = { "html", "css", "javascriptreact", "typescriptreact", "jsx", "tsx" },
+                    init_options = {
+                        html = { options = { ["bem.enabled"] = true } },
+                    },
+                },
                 -- Add more servers here as needed
             }
 
             -- Ensure the servers and tools are installed
             local ensure_installed = vim.tbl_keys(servers)
             vim.list_extend(ensure_installed, { "tailwindcss" }) -- Add any additional tools here
-            mason_tool_installer.setup { ensure_installed = ensure_installed }
+            mason_tool_installer.setup { ensure_installed = {
+				"prettier",
+				"stylua", -- lua formatter
+				"isort", -- python formatter
+				"black", -- python formatter
+				"pylint",
+				"eslint_d",
+			}, }
 
             mason_lspconfig.setup {
-                ensure_installed = ensure_installed,
+                ensure_installed = {
+				"cssls",
+				"eslint",
+				"html",
+				"jsonls",
+				"ts_ls",
+				"pyright",
+				"tailwindcss",
+				"gopls",
+				"golangci_lint_ls",
+			},
                 handlers = {
                     function(server_name)
                         local server = servers[server_name] or {}

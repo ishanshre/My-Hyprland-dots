@@ -50,6 +50,7 @@ require("lazy").setup({
     { import = "plugins.markdown-preview" },
     { import = "plugins.notify" },
     { import = "plugins.vim_visual_mini" },
+    { import = "plugins.terminal" },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.

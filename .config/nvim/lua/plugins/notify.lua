@@ -1,4 +1,5 @@
 return {
+  {
     "rcarriga/nvim-notify",
     opts = {
         timeout = 5000,
@@ -6,6 +7,14 @@ return {
         render = "wrapped-compact",
     },
     config = function()
-        vim.notify = require("notify")
+      vim.notify = require("notify")
     end,
+  },
+  {
+    "folke/todo-comments.nvim",
+    event = "VimEnter",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = { signs = false },
+  },
 }
+

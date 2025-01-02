@@ -26,8 +26,6 @@ require("lazy").setup({
     { import = "plugins.alpha" },
     { import = "plugins.whichkey" },
     { import = "plugins.telescope" },
-    -- { import = "plugins.lazydev" }, -- only for lua development
-    -- { import = "plugins.luvit_meta" }, -- only for lua development
     { import = "plugins.nvim_lspconfig" },
     { import = "plugins.confirm" },
     { import = "plugins.nvim_cmp" },
@@ -35,22 +33,20 @@ require("lazy").setup({
     { import = "plugins.comments" },
     { import = "plugins.mini" },
     { import = "plugins.treesetter" },
-    { import = "plugins.neotree" },
+    { import = "plugins.nvimtree" },
     { import = "plugins.debug" },
-    { import = "plugins.lint" },
     { import = "plugins.line" },
     { import = "plugins.autopairs" },
-    -- { import = "plugins.avante" },
     { import = "plugins.bufferline" },
     { import = "plugins.lazygit" },
     { import = "plugins.lualine" },
     { import = "plugins.misc" },
-    { import = "plugins.none-ls" },
     { import = "plugins.venv_selector" },
     { import = "plugins.markdown-preview" },
     { import = "plugins.notify" },
     { import = "plugins.vim_visual_mini" },
     { import = "plugins.terminal" },
+    { import = "plugins.formatter" },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.

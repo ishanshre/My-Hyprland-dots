@@ -3,7 +3,7 @@ return {
   version = '*',
   dependencies = {
     'nvim-lua/plenary.nvim',
-    'nvim-tree/nvim-web-devicons', -- Recommended for icons
+    'nvim-tree/nvim-web-devicons',
     'MunifTanjim/nui.nvim',
   },
   cmd = 'Neotree',
@@ -13,26 +13,30 @@ return {
   opts = {
     filesystem = {
       filtered_items = {
-        visible = true, -- Show hidden files
+        visible = false,
+        hide_dotfiles = true,
+        hide_gitignored = true,
+        hide_by_name = { ".DS_Store", "node_modules" },
       },
-      window = {
-        mappings = {
-          ['\\'] = 'close_window',
-        },
-      },
+      async_directory_scan = "auto",
+      table = false,
+      hijack_netrw_behavior = "disabled",
+    },
+    git_status = {
+      enabled = false,
     },
     default_component_configs = {
       name = {
-        highlight_opened_files = true, -- Highlight files already opened in buffers
+        highlight_opened_files = false,
       },
       modified = {
-        symbol = "[+]", -- Symbol for modified files
+        symbol = "[+]",
         highlight = "NeoTreeModified",
       },
     },
     window = {
-      border = "solid", -- Solid border for NeoTree window
-      border_color = "#ffffff", -- Set white border color
+      width = 30,
+      border = "solid",
     },
   },
 }

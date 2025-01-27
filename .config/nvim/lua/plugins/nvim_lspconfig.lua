@@ -108,9 +108,13 @@ return {
                         vim.keymap.set(mode, lhs, rhs, { buffer = buf, desc = desc })
                     end
 
-                    buf_map('n', 'gd', require('telescope.builtin').lsp_definitions, '[LSP] Goto Definition')
-                    buf_map('n', 'gr', require('telescope.builtin').lsp_references, '[LSP] Goto References')
-                    buf_map('n', 'gI', require('telescope.builtin').lsp_implementations, '[LSP] Goto Implementation')
+                    -- buf_map('n', 'gd', require('telescope.builtin').lsp_definitions, '[LSP] Goto Definition')
+                    -- buf_map('n', 'gr', require('telescope.builtin').lsp_references, '[LSP] Goto References')
+                    -- buf_map('n', 'gI', require('telescope.builtin').lsp_implementations, '[LSP] Goto Implementation')
+                    buf_map('n', 'gd', function() require('fzf-lua').lsp_definitions() end, '[LSP] Goto Definition')
+                    buf_map('n', 'gr', function() require('fzf-lua').lsp_references() end, '[LSP] Goto References')
+                    buf_map('n', 'gI', function() require('fzf-lua').lsp_implementations() end, '[LSP] Goto Implementation')
+
                     buf_map('n', '<leader>rn', vim.lsp.buf.rename, '[LSP] Rename')
                     buf_map('n', '<leader>ca', vim.lsp.buf.code_action, '[LSP] Code Action')
 

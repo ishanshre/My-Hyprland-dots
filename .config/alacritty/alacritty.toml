@@ -3,25 +3,25 @@
 size = 11.0
 
 [font.bold]
-family = "Cascadia Code"
+family = "Comic Mono"
 style = "Bold"
 
 [font.bold_italic]
-family = "Cascadia Code"
+family = "Comic Mono"
 style = "Bold Italic"
 
 [font.italic]
-family = "Cascadia Code"
+family = "Comic Mono"
 style = "Italic"
 
 [font.normal]
-family = "Cascadia Code"
+family = "Comic Mono"
 style = "Regular"
 
 [window]
 padding = { x = 0, y = 0 }
 dynamic_padding = true
-opacity = 1
+decorations = "None"
 blur = true
 
 [general]

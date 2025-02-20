@@ -46,8 +46,8 @@ return {
           ["<C-n>"] = cmp.mapping.select_next_item(), -- Next item
           ["<C-p>"] = cmp.mapping.select_prev_item(), -- Previous item
           ["<C-b>"] = cmp.mapping.scroll_docs(-4), -- Scroll docs up
-          ["<C-f>"] = cmp.mapping.scroll_docs(4), -- Scroll docs down
-          ["<C-y>"] = cmp.mapping.confirm { select = true }, -- Confirm selection
+          ["<C-y>"] = cmp.mapping.scroll_docs(4), -- Scroll docs down
+          ["<C-f>"] = cmp.mapping.confirm { select = true }, -- Confirm selection
           ["<C-Space>"] = cmp.mapping.complete {}, -- Manually trigger completion
           ["<C-l>"] = cmp.mapping(function()
             if luasnip.expand_or_locally_jumpable() then luasnip.expand_or_jump() end

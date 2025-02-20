@@ -116,3 +116,6 @@ alias yy="yazi"
 alias ff="fzf --preview='bat --color=always {}'"
 alias ffc="fzf --preview='cat {}'"
 
+export LD_LIBRARY_PATH=/home/ishan/.local/lib/arch-mojo:$LD_LIBRARY_PATH
+
+export PATH="$PATH:/home/ishan/.modular/bin"

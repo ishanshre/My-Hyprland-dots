@@ -196,25 +196,25 @@ plugins {
 
     zjstatus location="file:~/.local/share/zellij/plugins/zjstatus.wasm" {
                 format_left   "{mode} #[fg=black]{tabs}"
-                format_center ""
-                format_right  "#[fg=#6867AF,bold] {command_user}@{command_host} #[fg=#c2befe,bold]{datetime}"
+                format_center "{notifications}"
+                format_right  "#[fg=#6867AF,bold] {command_user}@{command_host} #[bg=#c2befe,fg=#000000,bold]{datetime}#[fg=cyan]↖ "
                 format_space  "#[fg=yellow] "
                 hide_frame_for_single_pane "false"
                 border_enabled  "false"
                 mode_normal        "#[bg=#b4befe,fg=#000000] {name} #[fg=#b4befe] "
-                mode_locked        "#[bg=#f38ba8,fg=#000000] {name} #[fg=#f38ba8] "
-                mode_resize        "#[bg=#f4befe,fg=#000000] {name} #[fg=#f4befe] "
-                mode_pane          "#[bg=#e4befe,fg=#000000] {name} #[fg=#e4befe] "
-                mode_tab           "#[bg=#f9e2af,fg=#000000] {name} #[fg=#f9e2af] "
-                mode_scroll        "#[bg=#fab387,fg=#000000] {name} #[fg=#fab387] "
-                mode_enter_search  "#[bg=#c4befe,fg=#000000] {name} #[fg=#c4befe] "
-                mode_search        "#[bg=#74c7ec,fg=#000000] {name} #[fg=#74c7ec] "
-                mode_rename_tab    "#[bg=#c2befe,fg=#000000] {name} #[fg=#c2befe] "
-                mode_rename_pane   "#[bg=#d3befe,fg=#000000] {name} #[fg=#d3befe] "
-                mode_session       "#[bg=#e4eefe,fg=#000000] {name} #[fg=#e4eefe] "
-                mode_move          "#[bg=#effefe,fg=#000000] {name} #[fg=#effefe] "
-                mode_prompt        "#[bg=#feaefe,fg=#000000] {name} #[fg=#feaefe] "
-                mode_tmux          "#[bg=#b4befe,fg=#000000] {name} #[fg=#b4befe] "
+                mode_locked        "#[bg=#f38ba8,fg=#000000] {name} "
+                mode_resize        "#[bg=#f4befe,fg=#000000] {name} "
+                mode_pane          "#[bg=#e4befe,fg=#000000] {name} "
+                mode_tab           "#[bg=#f9e2af,fg=#000000] {name} "
+                mode_scroll        "#[bg=#fab387,fg=#000000] {name} "
+                mode_enter_search  "#[bg=#c4befe,fg=#000000] {name} "
+                mode_search        "#[bg=#74c7ec,fg=#000000] {name} "
+                mode_rename_tab    "#[bg=#c2befe,fg=#000000] {name} "
+                mode_rename_pane   "#[bg=#d3befe,fg=#000000] {name} "
+                mode_session       "#[bg=#e4eefe,fg=#000000] {name} "
+                mode_move          "#[bg=#effefe,fg=#000000] {name} "
+                mode_prompt        "#[bg=#feaefe,fg=#000000] {name} "
+                mode_tmux          "#[bg=#b4befe,fg=#000000] {name} "
 
                 tab_normal              "#[fg=#6C7086]{name}"
                 tab_normal_fullscreen   "#[fg=#6C7086]{name}"
@@ -230,7 +230,7 @@ plugins {
                 tab_fullscreen_indicator " "
                 tab_floating_indicator   ""
 
-                datetime        "#[bg=#c2befe,fg=#000000,bold] {format} "
+                datetime        "#[fg=#6C7086,bold] {format} "
                 datetime_format "%A, %d %b %Y %I:%M"
                 datetime_timezone "Asia/Kathmandu"
 
@@ -244,6 +244,9 @@ plugins {
 		command_user_interval   "0"
 		command_user_rendermode "static"
 
+		notification_format_unread           "#[fg=#89B4FA,bg=#181825,blink]  #[fg=#89B4FA,bg=#181825] {message} "
+		notification_format_no_notifications "#[fg=#89B4FA,bg=#181825,dim]   "
+		notification_show_interval           "10"
             }
 }
 

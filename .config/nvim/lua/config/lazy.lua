@@ -56,6 +56,7 @@ require("lazy").setup({
     { import = "plugins.noice" },
     { import = "plugins.gitsigns" },
     { import = "plugins.markdown_render" },
+    { import = "plugins.cursorline" },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.

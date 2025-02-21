@@ -1,5 +1,5 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 vim.opt.termguicolors = true
 -- Set to true if you have a Nerd Font installed and selected in the terminal
@@ -18,7 +18,7 @@ vim.opt.relativenumber = true
 -- vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
-vim.opt.mouse = 'a'
+vim.opt.mouse = "a"
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
@@ -27,9 +27,7 @@ vim.opt.showmode = false
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-vim.schedule(function()
-    vim.opt.clipboard = 'unnamedplus'
-end)
+vim.schedule(function() vim.opt.clipboard = "unnamedplus" end)
 
 -- Enable break indent
 vim.opt.breakindent = true
@@ -42,7 +40,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Keep signcolumn on by default
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 
 -- Decrease update time
 vim.opt.updatetime = 250
@@ -59,14 +57,16 @@ vim.opt.splitbelow = true
 --  See `:help 'list'`
 --  and `:help 'listchars'`
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- Preview substitutions live, as you type!
-vim.opt.inccommand = 'split'
+vim.opt.inccommand = "split"
 
 -- Show which line your cursor is on
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
-vim.opt.background = 'dark'
+vim.opt.background = "dark"
+
+vim.opt.cmdheight = 0

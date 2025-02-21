@@ -6,48 +6,64 @@ return {
   },
   config = function()
     -- vim.opt.linespace = 8
+
     require("bufferline").setup {
       options = {
-        numbers = "none",
-        close_command = "bdelete! %d",
-        right_mouse_command = nil,
-        left_mouse_command = "buffer %d",
-        middle_mouse_command = nil,
-        indicator = {
-          icon = "▎", -- this should be omitted if indicator style is not 'icon'
-          style = "icon",
-        },
-        buffer_close_icon = "",
-        modified_icon = "●",
+        mode = "buffer", -- set to "tabs" to only show tabpages instead
+        themable = true, -- allows highlight groups to be overriden i.e. sets highlights as default
+        numbers = "ordinal", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
+        close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
+        right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
+        left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"
+        middle_mouse_command = nil, -- can be a string | function, see "Mouse actions"
+        -- buffer_close_icon = '󰅖',
+        buffer_close_icon = "✗",
+        -- buffer_close_icon = '✕',
         close_icon = "",
+        path_components = 1, -- Show only the file name without the directory
+        modified_icon = "●",
         left_trunc_marker = "",
         right_trunc_marker = "",
-        max_name_length = 18,
-        max_prefix_length = 15,
-        tab_size = 10,
+        max_name_length = 30,
+        max_prefix_length = 30, -- prefix used when a buffer is de-duplicated
+        tab_size = 21,
         diagnostics = false,
-        custom_filter = function(bufnr)
-          -- if the result is false, this buffer will be shown, otherwise, this
-          -- buffer will be hidden.
-
-          -- filter out filetypes you don't want to see
-          local exclude_ft = { "qf", "fugitive", "git" }
-          local cur_ft = vim.bo[bufnr].filetype
-          local should_filter = vim.tbl_contains(exclude_ft, cur_ft)
-
-          if should_filter then return false end
-
-          return true
-        end,
-        show_buffer_icons = false,
+        diagnostics_update_in_insert = false,
+        color_icons = true,
+        show_buffer_icons = true,
         show_buffer_close_icons = true,
         show_close_icon = true,
-        show_tab_indicators = true,
         persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
-        separator_style = "bar",
-        enforce_regular_tabs = false,
+        separator_style = "slant",
+        -- separator_style = { '│', '│' }, -- | "thick" | "thin" | { 'any', 'any' },
+        enforce_regular_tabs = true,
         always_show_bufferline = true,
-        sort_by = "id",
+        show_tab_indicators = false,
+        indicator = {
+          -- icon = '▎', -- this should be omitted if indicator style is not 'icon'
+          style = "underline", -- Options: 'icon', 'underline', 'none'
+        },
+        icon_pinned = "󰐃",
+        minimum_padding = 1,
+        maximum_padding = 5,
+        maximum_length = 15,
+        sort_by = "insert_at_end",
+      },
+      highlights = {
+        separator = {
+          fg = "#ffffff",
+        },
+        buffer_selected = {
+          bold = true,
+          italic = true,
+        },
+        -- separator_selected = {},
+        -- tab_selected = {},
+        background = {
+          fg = "#ff00ff",
+        },
+        -- indicator_selected = {},
+        -- fill = {},
       },
     }
 

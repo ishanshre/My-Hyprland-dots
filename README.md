@@ -13,44 +13,20 @@ Hyprland configuration after Vanilla Arch Linux Installation
    $ cd Hyprland-dots
    ```
 
-4. Enable Chaotic Repo from its website or run the script for cloned repo
-   ```
-   $ chmod +x chaotic-repo.sh
-   $ sudo ./chaotic-repo.sh
-   ```
-
-5. Install Paru package (Chaotic Repo must be enabled)
+4. Install Paru package (Chaotic Repo must be enabled)
    ```$ sudo pacman -S paru-bin ```
-6. Run the hyprland script
+5. Run the hyprland script
    ```
    $ chmod +x hyprland.sh
    $ ./hyprland.sh
    ```
 
-7. Install packages (You can edit packages.sh to add or remove packages)
-   ```
-   $ chmod +x packages.sh
-   $ ./packages.sh
-   ```
-
-8. Copy .config folder from clone repo to your home directory
+6. Copy .config folder from clone repo to your home directory
    ```$ cp -rf ~/Hyprland-dots/.config ~/```
-9.  Copy wallpaper to Pictures (Note. Wallpaper is downloaded from wallpaper flare website)
-   ```$ cp 10.jpg ~/Pictures```
-11. To change default shell to fish shell
-   ```$ chsh -s /usr/bin/fish $USER```
-12.  Reboot the System
+7. To change default shell to fish shell
+   ```$ chsh -s /usr/bin/zsh $USER```
+8.  Reboot the System
    
-   ## Samples
-
-   ### Sample 1
-   ![Sample](hyprland-config.png)
-   ### Sample 2 (Rofi menu)
-   ![Sample Rofi Menu](hyprland-config1.png)
-   ### Sample 3 (Rofi Power Menu)
-   ![Sample Rofi Power Menu](hyprland-config2.png)
-
-
 
 # My Setup Info
     OS: Arch Linux

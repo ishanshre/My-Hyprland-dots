@@ -55,8 +55,8 @@ Hyprland configuration after Vanilla Arch Linux Installation
 # My Setup Info
     OS: Arch Linux
     Kernel: linux-lts
-    Shell: Fish (https://fishshell.com/)
-    Fish Shell Theme: Oh-my-fish (https://github.com/oh-my-fish/oh-my-fish)
+    Shell: Zsh (https://www.zsh.org/)
+    ZSH Shell Theme: Configured using zinit plugin manager
     Desktop Environment: Hyprland (https://hyprland.org/)
     Status Pannel: Waybar (https://github.com/Alexays/Waybar)
     Application Menu: Rofi Menu (Catppuccin-mocha theme) (https://github.com/davatorium/rofi)
@@ -64,8 +64,10 @@ Hyprland configuration after Vanilla Arch Linux Installation
     Theme: Sweet
     Icons: Sweet-Red
     Terminal: Alacritty (https://github.com/alacritty/alacritty)
-    Font: Cascadia Code
-    File Manager: Thunar
+    Font: Comic Sans MS
+    File Manager: Thunar, Yazi
     Image Viewer: Viewnior
     Office: Libre Office
     Code Editor: Neovim and Vscode
+
+## Hyprland Config taken from @JaKooLit (https://github.com/JaKooLit/Hyprland-Dots/tree/main/config/hypr)

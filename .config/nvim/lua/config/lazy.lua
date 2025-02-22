@@ -57,6 +57,7 @@ require("lazy").setup({
     { import = "plugins.gitsigns" },
     { import = "plugins.markdown_render" },
     { import = "plugins.cursorline" },
+    -- { import = "plugins.evangelion" },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.

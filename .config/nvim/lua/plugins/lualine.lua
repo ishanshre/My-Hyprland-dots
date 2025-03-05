@@ -18,13 +18,14 @@ return {
           {
             "filename",
             path = 1, -- Show relative path
-            shorting_target = 60, -- Shorten path if it exceeds this length
+            shorting_target = 100, -- Shorten path if it exceeds this length
             symbols = {
               modified = "[+]", -- File is modified
               readonly = "[-]", -- File is readonly
               unnamed = "[No Name]", -- No file name
             },
           },
+          { "buffers", mode = 1 },
         },
         lualine_x = {
           {

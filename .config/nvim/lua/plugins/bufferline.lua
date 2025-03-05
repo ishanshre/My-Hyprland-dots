@@ -84,27 +84,5 @@ return {
     vim.keymap.set("n", "<leader>8", "<cmd>lua require('bufferline').go_to_buffer(8)<CR>", opts)
     vim.keymap.set("n", "<leader>9", "<cmd>lua require('bufferline').go_to_buffer(9)<CR>", opts)
     -- Vertical Split
-    vim.keymap.set(
-      "n",
-      "<leader>sv",
-      ":vsplit<CR>",
-      { noremap = true, silent = true, desc = "Vertical Split" }
-    )
-
-    -- Horizontal Split
-    vim.keymap.set(
-      "n",
-      "<leader>sh",
-      ":split<CR>",
-      { noremap = true, silent = true, desc = "Horizontal Split" }
-    )
-
-    -- Close the current split
-    vim.keymap.set(
-      "n",
-      "<leader>sc",
-      ":q<CR>",
-      { noremap = true, silent = true, desc = "Close Split" }
-    )
   end,
 }

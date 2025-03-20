@@ -2,7 +2,6 @@
 # /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # Script for waybar styles
 
-set -euo pipefail
 IFS=$'\n\t'
 
 # Define directories
@@ -18,7 +17,7 @@ menu() {
         if [ -f "$waybar_styles/$file" ]; then
             options+=("$(basename "$file" .css)")
         fi
-    done < <(find "$waybar_styles" -maxdepth 1 -type f -name '*.css' -exec basename {} \; | sort)
+    done < <(find -L "$waybar_styles" -maxdepth 1 -type f -name '*.css' -exec basename {} \; | sort)
     
     printf '%s\n' "${options[@]}"
 }
@@ -44,7 +43,7 @@ main() {
 # Kill Rofi if already running before execution
 if pgrep -x "rofi" >/dev/null; then
     pkill rofi
-    exit 0
+    #exit 0
 fi
 
 main

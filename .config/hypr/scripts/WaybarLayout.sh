@@ -2,7 +2,6 @@
 # /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # Script for waybar layout or configs
 
-set -euo pipefail
 IFS=$'\n\t'
 
 # Define directories
@@ -16,7 +15,7 @@ menu() {
     options=()
     while IFS= read -r file; do
         options+=("$(basename "$file")")
-    done < <(find "$waybar_layouts" -maxdepth 1 -type f -exec basename {} \; | sort)
+    done < <(find -L "$waybar_layouts" -maxdepth 1 -type f -exec basename {} \; | sort)
 
     printf '%s\n' "${options[@]}"
 }
@@ -50,7 +49,7 @@ main() {
 # Kill Rofi if already running before execution
 if pgrep -x "rofi" >/dev/null; then
     pkill rofi
-    exit 0
+    #exit 0
 fi
 
 main

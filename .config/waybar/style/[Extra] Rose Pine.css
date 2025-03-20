@@ -11,97 +11,99 @@
 @define-color wb-hvr-fg #f6c177;
 
 * {
-	font-family: "JetBrainsMono Nerd Font";
+	font-family: "Comic Sans MS";
 	font-weight: bold;
 	/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
-	font-size: 97%;
+	font-size: 96%;
 	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 	border-radius: 12px;
 }
 
 window#waybar {
-    background: @bar-bg;
+	background: @bar-bg;
 }
 
 window#waybar.empty,
 window#waybar.empty #window {
-    background-color: transparent;
-    padding: 0px;
-    border: 0px;
+	background-color: transparent;
+	padding: 0px;
+	border: 0px;
 }
 
 tooltip {
-    background: @main-bg;
-    color: @main-fg;
-    border-radius: 8px;
-    border-width: 0px;
+	background: @main-bg;
+	color: @main-fg;
+	border-radius: 8px;
+	border-width: 0px;
 }
 
 #workspaces button {
-    box-shadow: none;
+	box-shadow: none;
 	text-shadow: none;
-    padding: 0px;
+	padding: 1px;
+	margin-left: 1px;
+	margin-right: 1px;
 	border-bottom: 2px;
-	border-color: #2B5D34;
+	border-color: #c6a0f6;
 	border-style: solid;
 	border-radius: 10px;
-    padding-left: 2px;
-    padding-right: 4px;
+	padding-left: 2px;
+	padding-right: 4px;
 	background: @main-bg;
-    color: @main-fg;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+	color: @main-fg;
+	animation: gradient_f 20s ease-in infinite;
+	transition: all 0.5s cubic-bezier(.55, -0.68, .48, 1.682);
 }
 
 #workspaces button.active {
-    background: @wb-act-bg;
-    color: @wb-act-fg;
-    padding-left: 2px;
-    padding-right: 4px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+	background: @wb-act-bg;
+	color: @wb-act-fg;
+	padding-left: 2px;
+	padding-right: 4px;
+	animation: gradient_f 20s ease-in infinite;
+	transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
 }
 
 #workspaces button:hover {
-    background: @wb-hvr-bg;
-    color: @wb-hvr-fg;
-    padding-left: 2px;
-    padding-right: 2px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+	background: @wb-hvr-bg;
+	color: @wb-hvr-fg;
+	padding-left: 2px;
+	padding-right: 2px;
+	animation: gradient_f 20s ease-in infinite;
+	transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
 }
 
 #taskbar button {
-    box-shadow: none;
+	box-shadow: none;
 	text-shadow: none;
-    padding: 0px;
+	padding: 0px;
 	border-bottom: 2px;
-	border-color: #2B5D34;
+	border-color: #c6a0f6;
 	border-style: solid;
 	border-radius: 10px;
-    padding-left: 3px;
-    padding-right: 3px;
-    color: @wb-color;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+	padding-left: 3px;
+	padding-right: 3px;
+	color: @wb-color;
+	animation: gradient_f 20s ease-in infinite;
+	transition: all 0.5s cubic-bezier(.55, -0.68, .48, 1.682);
 }
 
 #taskbar button.active {
-    background: @wb-act-bg;
-    color: @wb-act-color;
-    padding-left: 8px;
-    padding-right: 8px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+	background: @wb-act-bg;
+	color: @wb-act-color;
+	padding-left: 8px;
+	padding-right: 8px;
+	animation: gradient_f 20s ease-in infinite;
+	transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
 }
 
 #taskbar button:hover {
-    background: @wb-hvr-bg;
-    color: @wb-hvr-color;
-    padding-left: 3px;
-    padding-right: 3px;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+	background: @wb-hvr-bg;
+	color: @wb-hvr-color;
+	padding-left: 3px;
+	padding-right: 3px;
+	animation: gradient_f 20s ease-in infinite;
+	transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
 }
 
 #backlight,
@@ -147,28 +149,30 @@ tooltip {
 #custom-weather.clearNight,
 #custom-weather.cloudyFoggyDay,
 #custom-weather.cloudyFoggyNight,
-#custom-weather.default, 
+#custom-weather.default,
 #custom-weather.rainyDay,
 #custom-weather.rainyNight,
 #custom-weather.severe,
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight,
 #custom-weather.sunnyDay {
-    color: @main-fg;
-    background: @main-bg;
-    opacity: 1;
+	color: @main-fg;
+	background: @main-bg;
+	opacity: 0.8;
 	border-bottom: 2px;
-	border-color: #2B5D34;
+	border-color: #c6a0f6;
 	border-style: solid;
 	border-radius: 10px;
 	padding-top: 4px;
 	padding-bottom: 4px;
 	padding-right: 6px;
 	padding-left: 6px;
+	margin-left: 2px;
+	margin-right: 2px;
 }
 
 #temperature.critical {
-  	background-color: red;
+	background-color: red;
 }
 
 /*-----Indicators----*/
@@ -180,17 +184,20 @@ tooltip {
 #backlight {
 	padding-right: 2px;
 }
+
 #network {
 	padding-right: 12px;
 }
+
 #custom-power {
 	padding-right: 1px;
 }
+
 #group-motherboard,
 #group-laptop,
 #group-audio {
-    color: @main-fg;
-    background-color: @main-bg;
+	color: @main-fg;
+	background-color: @main-bg;
 }
 
 #pulseaudio-slider slider {
@@ -231,4 +238,31 @@ tooltip {
 #backlight-slider highlight {
 	min-width: 10px;
 	border-radius: 5px;
+}
+
+#custom-cava_mviz {
+	animation: rainbow-text 0.80s linear infinite;
+}
+
+@keyframes rainbow-text {
+	0% {
+		color: rgb(0, 247, 198);
+	}
+
+	/* Low amplitude */
+	42% {
+		color: rgb(60, 0, 179);
+	}
+
+	/* Mid amplitude */
+	71% {
+		color: indigo;
+	}
+
+	/* Higher amplitude */
+	100% {
+		color: rgb(234, 0, 255);
+	}
+
+	/* Maximum amplitude */
 }

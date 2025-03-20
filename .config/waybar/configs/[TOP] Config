@@ -20,15 +20,15 @@
 
 "modules-left": [	
 	"custom/menu",
-	"power-profiles-daemon",
 	"cpu",
 	"memory",
 	"temperature",
 	"clock#2",
+	"custom/cava_mviz",
 	],
     
 "modules-center": [
-	"custom/cava_mviz",
+	"power-profiles-daemon",
 	"backlight",
 	"hyprland/workspaces#roman",
 	"battery",

@@ -59,7 +59,7 @@ return {
       }
 
       -- Keybinding for formatting
-      vim.api.nvim_set_keymap("n", "<leader>f", ":Format<CR>", { noremap = true, silent = true })
+      vim.api.nvim_set_keymap("n", "<leader>F", ":Format<CR>", { noremap = true, silent = true })
     end,
   },
 }

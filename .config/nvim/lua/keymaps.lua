@@ -8,7 +8,7 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- Diagnostic keymaps
 vim.keymap.set(
   "n",
-  "<leader>q",
+  "<leader>dq",
   vim.diagnostic.setloclist,
   { desc = "Open diagnostic [Q]uickfix list" }
 )

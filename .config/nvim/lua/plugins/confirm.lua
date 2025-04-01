@@ -32,10 +32,31 @@ return {
       formatters_by_ft = {
         lua = { "stylua" },
         -- Conform can also run multiple formatters sequentially
-        python = { "isort", "black" },
+        -- python = { "isort", "black" },
+        python = { "ruff_imports", "ruff_format" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
+      },
+      formatters = {
+        ruff_format = {
+          command = "ruff",
+          args = { "format", "-" }, -- The dash means stdin
+          stdin = true,
+          -- Optional: Uncomment to make ruff mimic black's formatting style
+          -- args = { "format", "--config=lint.pyproject.toml", "-" },
+        },
+        ruff_imports = {
+          command = "ruff",
+          args = {
+            "check",
+            "--select",
+            "I", -- Only target import rules
+            "--fix", -- Apply fixes
+            "-",
+          },
+          stdin = true,
+        },
       },
     },
   },

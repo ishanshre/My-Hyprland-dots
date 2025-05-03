@@ -20,6 +20,9 @@ return {
       -- LSP capabilities for autocompletion
       local capabilities = require("blink.cmp").get_lsp_capabilities()
 
+      -- Check if pylyzer is available
+      local has_pylyzer = vim.fn.executable "pylyzer" == 1
+
       -- Servers and their configurations
       local servers = {
         lua_ls = {
@@ -32,18 +35,23 @@ return {
             },
           },
         },
-        pyright = {
-          settings = {
-            python = {
-              analysis = {
-                typeCheckingMode = "off",
-                diagnosticMode = "openFilesOnly",
-                autoImportCompletions = true,
-                useLibraryCodeForTypes = true,
-              },
-            },
-          },
-        },
+        -- pyright = {
+        --   settings = {
+        --     python = {
+        --       analysis = {
+        --         autoSearchPaths = true,
+        --         useLibraryCodeForTypes = true,
+        --         diagnosticMode = "openFilesOnly", -- or "workspace"
+        --         typeCheckingMode = "basic", -- "basic", "off", "strict"
+        --         inlayHints = {
+        --           variableTypes = true,
+        --           functionReturnTypes = true,
+        --           parameterNames = true,
+        --         },
+        --       },
+        --     },
+        --   },
+        -- },
         rust_analyzer = {},
         tailwindcss = {},
         html = {
@@ -68,7 +76,6 @@ return {
           },
         },
       }
-
       -- Install LSP servers and tools
       local ensure_installed_lsp = vim.tbl_keys(servers)
       local ensure_installed_tools = {
@@ -77,6 +84,7 @@ return {
         "isort",
         "black",
         "eslint_d",
+        "ruff",
       }
 
       mason_lspconfig.setup {

@@ -40,11 +40,29 @@ require("lazy").setup({
     { import = "plugins.noice" },
     { import = "plugins.gitsigns" },
     { import = "plugins.markdown_render" },
+    -- { import = "plugins.codeium" },
     { import = "plugins.cursorline" },
     { import = "plugins.smear_cursor" },
+    { import = "plugins.cyberdream" },
+    { import = "plugins.kanagawa" },
   },
   install = { colorscheme = { "habamax" } },
   checker = { enabled = true },
+  performance = {
+    rtp = {
+      -- disable some rtp plugins
+      disabled_plugins = {
+        "gzip",
+        -- "matchit",
+        -- "matchparen",
+        -- "netrwPlugin",
+        "tarPlugin",
+        "tohtml",
+        "tutor",
+        "zipPlugin",
+      },
+    },
+  },
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {

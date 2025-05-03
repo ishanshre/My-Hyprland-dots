@@ -42,7 +42,7 @@ vim.keymap.set(
   { desc = "rename all the matching selection" }
 )
 
-vim.api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "jk", "<Esc>", { noremap = true, silent = true })
 
 vim.keymap.set("n", ".", "<cmd>bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", ",", "<cmd>bprevious<CR>", { desc = "Previous buffer" })
@@ -75,3 +75,10 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
   callback = function() vim.highlight.on_yank() end,
 })
+
+vim.keymap.set("n", "<leader>rp", function()
+  local path = vim.fn.expand "%:~:." -- Get path relative to cwd
+  path = path:gsub("%.py$", "") -- Remove .py extension
+  path = path:gsub("/", ".") -- Replace / with .
+  vim.fn.setreg("+", path) -- Yank to system clipboard (optional)
+end, { desc = "Yank relative dot-path for python", noremap = true, silent = true })

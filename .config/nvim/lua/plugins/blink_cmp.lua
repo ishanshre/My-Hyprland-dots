@@ -71,8 +71,9 @@ return {
       -- Default list of enabled providers defined so that you can extend it
       -- elsewhere in your config, without redefining it, due to `opts_extend`
       sources = {
-        default = { "lsp", "path", "buffer", "snippets", "emoji", "sql" },
+        default = { "lsp", "path", "buffer", "snippets", "codeium", "emoji", "sql" },
         providers = {
+          codeium = { name = "Codeium", module = "codeium.blink", async = true },
           emoji = {
             module = "blink-emoji",
             name = "Emoji",

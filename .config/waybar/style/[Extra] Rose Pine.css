@@ -11,10 +11,9 @@
 @define-color wb-hvr-fg #f6c177;
 
 * {
-	font-family: "Comic Sans MS";
-	font-weight: bold;
+	font-family: "Comic Mono";
 	/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
-	font-size: 96%;
+	font-size: 97%;
 	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 	border-radius: 12px;
 }
@@ -37,14 +36,13 @@ tooltip {
 	border-width: 0px;
 }
 
+#taskbar button,
 #workspaces button {
 	box-shadow: none;
 	text-shadow: none;
-	padding: 1px;
-	margin-left: 1px;
-	margin-right: 1px;
+	padding: 0px;
 	border-bottom: 2px;
-	border-color: #c6a0f6;
+	border-color: #7851A9;
 	border-style: solid;
 	border-radius: 10px;
 	padding-left: 2px;
@@ -78,7 +76,7 @@ tooltip {
 	text-shadow: none;
 	padding: 0px;
 	border-bottom: 2px;
-	border-color: #c6a0f6;
+	border-color: #7851A9;
 	border-style: solid;
 	border-radius: 10px;
 	padding-left: 3px;
@@ -130,6 +128,7 @@ tooltip {
 #custom-browser,
 #custom-cava_mviz,
 #custom-cycle_wall,
+#custom-dot_update,
 #custom-file_manager,
 #custom-keybinds,
 #custom-keyboard,
@@ -138,8 +137,11 @@ tooltip {
 #custom-hint,
 #custom-hypridle,
 #custom-menu,
+#custom-playerctl,
 #custom-power_vertical,
 #custom-power,
+#custom-quit,
+#custom-reboot,
 #custom-settings,
 #custom-spotify,
 #custom-swaync,
@@ -158,17 +160,15 @@ tooltip {
 #custom-weather.sunnyDay {
 	color: @main-fg;
 	background: @main-bg;
-	opacity: 0.8;
+	opacity: 1;
 	border-bottom: 2px;
-	border-color: #c6a0f6;
+	border-color: #7851A9;
 	border-style: solid;
 	border-radius: 10px;
-	padding-top: 4px;
-	padding-bottom: 4px;
+	padding-top: 2px;
+	padding-bottom: 1px;
 	padding-right: 6px;
 	padding-left: 6px;
-	margin-left: 2px;
-	margin-right: 2px;
 }
 
 #temperature.critical {
@@ -178,7 +178,24 @@ tooltip {
 /*-----Indicators----*/
 #custom-hypridle.notactive,
 #idle_inhibitor.activated {
-	color: #39FF14;
+	color: #7851A9;
+}
+
+@keyframes blink {
+	to {
+		color: @main-bg;
+	}
+}
+
+#battery.critical:not(.charging) {
+	background-color: red;
+	color: white;
+	animation-name: blink;
+	animation-duration: 3.0s;
+	animation-timing-function: steps(12);
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	box-shadow: inset 0 -3px transparent;
 }
 
 #backlight {
@@ -200,6 +217,7 @@ tooltip {
 	background-color: @main-bg;
 }
 
+#backlight-slider slider,
 #pulseaudio-slider slider {
 	min-width: 0px;
 	min-height: 0px;
@@ -209,60 +227,15 @@ tooltip {
 	box-shadow: none;
 }
 
+#backlight-slider trough,
 #pulseaudio-slider trough {
 	min-width: 80px;
 	min-height: 5px;
 	border-radius: 5px;
 }
 
+#backlight-slider highlight,
 #pulseaudio-slider highlight {
 	min-height: 10px;
 	border-radius: 5px;
-}
-
-#backlight-slider slider {
-	min-width: 0px;
-	min-height: 0px;
-	opacity: 0;
-	background-image: none;
-	border: none;
-	box-shadow: none;
-}
-
-#backlight-slider trough {
-	min-width: 80px;
-	min-height: 10px;
-	border-radius: 5px;
-}
-
-#backlight-slider highlight {
-	min-width: 10px;
-	border-radius: 5px;
-}
-
-#custom-cava_mviz {
-	animation: rainbow-text 0.80s linear infinite;
-}
-
-@keyframes rainbow-text {
-	0% {
-		color: rgb(0, 247, 198);
-	}
-
-	/* Low amplitude */
-	42% {
-		color: rgb(60, 0, 179);
-	}
-
-	/* Mid amplitude */
-	71% {
-		color: indigo;
-	}
-
-	/* Higher amplitude */
-	100% {
-		color: rgb(234, 0, 255);
-	}
-
-	/* Maximum amplitude */
 }

@@ -53,6 +53,21 @@ return {
         --   },
         -- },
         rust_analyzer = {},
+        pyright = {
+          settings = {
+            python = {
+              analysis = {
+                diagnosticMode = "openFilesOnly", -- or "workspace"
+                typeCheckingMode = "off", -- "basic", "off", "strict"
+                inlayHints = {
+                  variableTypes = false,
+                  functionReturnTypes = false,
+                  parameterNames = false,
+                },
+              },
+            },
+          },
+        },
         tailwindcss = {},
         html = {
           settings = {

@@ -206,7 +206,7 @@ plugins {
     welcome-screen location="zellij:session-manager" {
         welcome_screen true
     }
-    zjstatus location="file:/home/ishan/.local/share/zellij/plugins/zjstatus.wasm" {
+    zjstatus location="file:/home/ishan/.config/zellij/plugins/zjstatus.wasm" {
         border_enabled false
         command_host_command "uname -n"
         command_host_format "{stdout}"
@@ -238,12 +238,12 @@ plugins {
         mode_session "#[bg=#e4eefe,fg=#000000] {name} #[fg=#e4eefe] "
         mode_tab "#[bg=#f9e2af,fg=#000000] {name} #[fg=#f9e2af] "
         mode_tmux "#[bg=#b4befe,fg=#000000] {name} #[fg=#b4befe] "
-        tab_active "#[fg=blue,bold]{name}#[fg=yellow,bold]{floating_indicator}"
+        tab_active "#[fg=blue,bold]{name}#[fg=yellow,bold]{floating_indicator}{sync_indicator}{floating_indicator}"
         tab_active_fullscreen "#[fg=yellow,bold]{name}#[fg=yellow,bold]{fullscreen_indicator}"
         tab_active_sync "#[fg=green,bold]{name}#[fg=yellow,bold]{sync_indicator}"
         tab_floating_indicator ""
         tab_fullscreen_indicator " "
-        tab_normal "#[fg=#6C7086]{name}"
+        tab_normal "#[fg=#6C7086]{name}{floating_indicator}{sync_indicator}{floating_indicator}"
         tab_normal_fullscreen "#[fg=#6C7086]{name}"
         tab_normal_sync "#[fg=#6C7086]{name}"
         tab_separator "#[fg=cyan,bold] ⋮ "

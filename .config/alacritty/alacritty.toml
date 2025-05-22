@@ -25,8 +25,11 @@ decorations = "None"
 blur = true
 
 [general]
+# import = ["~/.config/alacritty/cyberdream.toml"]
 import = ["~/.config/alacritty/catppuccin.toml"]
 
 
 [keyboard]
 bindings = [{key = 'x', mods = "Alt", action = "None"}]
+
+

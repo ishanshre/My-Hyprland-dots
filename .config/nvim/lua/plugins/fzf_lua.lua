@@ -34,6 +34,11 @@ return {
         desc = "LSP Definitions",
       },
       { "<leader>fu", "<cmd>UnsavedBuffers<CR>", desc = "Show unsaved buffers" },
+      {
+        "<leader>fq",
+        function() require("fzf-lua").diagnostics_document() end,
+        desc = "Diagnostics Document",
+      },
     },
     config = function()
       local fzf_lua = require "fzf-lua"
@@ -63,6 +68,21 @@ return {
           },
         })
       end, { desc = "List unsaved buffers in FZF" })
+
+      fzf_lua.setup {
+        winopts = {
+          preview = {
+            default = "bat",
+            wrap = true,
+          },
+        },
+        diagnostics = {
+          multiline = true,
+          fzf_opts = {
+            ["--wrap"] = true,
+          },
+        },
+      }
     end,
   },
 }

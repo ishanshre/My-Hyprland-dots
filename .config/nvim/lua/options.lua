@@ -69,8 +69,8 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 vim.opt.background = "dark"
 
-vim.opt.cmdheight = 0
-
+-- vim.opt.cmdheight = 0
+--
 -- vim.diagnostic.config {
 --   virtual_text = {
 --     prefix = "●", -- Choose what symbol appears in ghost text
@@ -81,3 +81,4 @@ vim.opt.cmdheight = 0
 --   update_in_insert = false, -- disable inline error messages while typing
 --   severity_sort = true,
 -- }
+--

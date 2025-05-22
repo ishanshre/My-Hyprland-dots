@@ -1,8 +1,8 @@
-# My-Hyprland-dots/.config/nvim
+# my-dots/.config/nvim
 
-<a href="https://dotfyle.com/ishanshre/my-hyprland-dots-config-nvim"><img src="https://dotfyle.com/ishanshre/my-hyprland-dots-config-nvim/badges/plugins?style=for-the-badge" /></a>
-<a href="https://dotfyle.com/ishanshre/my-hyprland-dots-config-nvim"><img src="https://dotfyle.com/ishanshre/my-hyprland-dots-config-nvim/badges/leaderkey?style=for-the-badge" /></a>
-<a href="https://dotfyle.com/ishanshre/my-hyprland-dots-config-nvim"><img src="https://dotfyle.com/ishanshre/my-hyprland-dots-config-nvim/badges/plugin-manager?style=for-the-badge" /></a>
+<a href="https://dotfyle.com/ishanshre/my-dots-config-nvim"><img src="https://dotfyle.com/ishanshre/my-dots-config-nvim/badges/plugins?style=flat" /></a>
+<a href="https://dotfyle.com/ishanshre/my-dots-config-nvim"><img src="https://dotfyle.com/ishanshre/my-dots-config-nvim/badges/leaderkey?style=flat" /></a>
+<a href="https://dotfyle.com/ishanshre/my-dots-config-nvim"><img src="https://dotfyle.com/ishanshre/my-dots-config-nvim/badges/plugin-manager?style=flat" /></a>
 
 
 ## Install Instructions
@@ -12,13 +12,13 @@
 Clone the repository and install the plugins:
 
 ```sh
-git clone git@github.com:ishanshre/My-Hyprland-dots ~/.config/ishanshre/My-Hyprland-dots
+git clone git@github.com:ishanshre/my-dots ~/.config/ishanshre/my-dots
 ```
 
 Open Neovim with this config:
 
 ```sh
-NVIM_APPNAME=ishanshre/My-Hyprland-dots/.config/nvim nvim
+NVIM_APPNAME=ishanshre/my-dots/.config/nvim nvim
 ```
 
 ## Plugins
@@ -28,6 +28,8 @@ NVIM_APPNAME=ishanshre/My-Hyprland-dots/.config/nvim nvim
 + [Exafunction/codeium.nvim](https://dotfyle.com/plugins/Exafunction/codeium.nvim)
 ### colorscheme
 
++ [rebelot/kanagawa.nvim](https://dotfyle.com/plugins/rebelot/kanagawa.nvim)
++ [scottmckendry/cyberdream.nvim](https://dotfyle.com/plugins/scottmckendry/cyberdream.nvim)
 + [catppuccin/nvim](https://dotfyle.com/plugins/catppuccin/nvim)
 ### comment
 
@@ -41,26 +43,26 @@ NVIM_APPNAME=ishanshre/My-Hyprland-dots/.config/nvim nvim
 + [ya2s/nvim-cursorline](https://dotfyle.com/plugins/ya2s/nvim-cursorline)
 ### debugging
 
-+ [rcarriga/nvim-dap-ui](https://dotfyle.com/plugins/rcarriga/nvim-dap-ui)
 + [mfussenegger/nvim-dap](https://dotfyle.com/plugins/mfussenegger/nvim-dap)
++ [rcarriga/nvim-dap-ui](https://dotfyle.com/plugins/rcarriga/nvim-dap-ui)
 ### editing-support
 
++ [windwp/nvim-ts-autotag](https://dotfyle.com/plugins/windwp/nvim-ts-autotag)
 + [folke/snacks.nvim](https://dotfyle.com/plugins/folke/snacks.nvim)
 + [windwp/nvim-autopairs](https://dotfyle.com/plugins/windwp/nvim-autopairs)
-+ [windwp/nvim-ts-autotag](https://dotfyle.com/plugins/windwp/nvim-ts-autotag)
 ### file-explorer
 
 + [nvim-neo-tree/neo-tree.nvim](https://dotfyle.com/plugins/nvim-neo-tree/neo-tree.nvim)
-+ [nvim-tree/nvim-tree.lua](https://dotfyle.com/plugins/nvim-tree/nvim-tree.lua)
 + [mikavilpas/yazi.nvim](https://dotfyle.com/plugins/mikavilpas/yazi.nvim)
++ [nvim-tree/nvim-tree.lua](https://dotfyle.com/plugins/nvim-tree/nvim-tree.lua)
 ### formatting
 
 + [stevearc/conform.nvim](https://dotfyle.com/plugins/stevearc/conform.nvim)
 + [mhartington/formatter.nvim](https://dotfyle.com/plugins/mhartington/formatter.nvim)
 ### fuzzy-finder
 
-+ [ibhagwan/fzf-lua](https://dotfyle.com/plugins/ibhagwan/fzf-lua)
 + [nvim-telescope/telescope.nvim](https://dotfyle.com/plugins/nvim-telescope/telescope.nvim)
++ [ibhagwan/fzf-lua](https://dotfyle.com/plugins/ibhagwan/fzf-lua)
 ### git
 
 + [lewis6991/gitsigns.nvim](https://dotfyle.com/plugins/lewis6991/gitsigns.nvim)
@@ -71,23 +73,26 @@ NVIM_APPNAME=ishanshre/My-Hyprland-dots/.config/nvim nvim
 + [echasnovski/mini.icons](https://dotfyle.com/plugins/echasnovski/mini.icons)
 ### indent
 
-+ [lukas-reineke/indent-blankline.nvim](https://dotfyle.com/plugins/lukas-reineke/indent-blankline.nvim)
 + [nvimdev/indentmini.nvim](https://dotfyle.com/plugins/nvimdev/indentmini.nvim)
++ [lukas-reineke/indent-blankline.nvim](https://dotfyle.com/plugins/lukas-reineke/indent-blankline.nvim)
 ### keybinding
 
 + [folke/which-key.nvim](https://dotfyle.com/plugins/folke/which-key.nvim)
 ### lsp
 
-+ [j-hui/fidget.nvim](https://dotfyle.com/plugins/j-hui/fidget.nvim)
-+ [onsails/lspkind.nvim](https://dotfyle.com/plugins/onsails/lspkind.nvim)
 + [neovim/nvim-lspconfig](https://dotfyle.com/plugins/neovim/nvim-lspconfig)
++ [onsails/lspkind.nvim](https://dotfyle.com/plugins/onsails/lspkind.nvim)
++ [j-hui/fidget.nvim](https://dotfyle.com/plugins/j-hui/fidget.nvim)
 ### lsp-installer
 
 + [williamboman/mason.nvim](https://dotfyle.com/plugins/williamboman/mason.nvim)
 ### markdown-and-latex
 
-+ [iamcco/markdown-preview.nvim](https://dotfyle.com/plugins/iamcco/markdown-preview.nvim)
 + [MeanderingProgrammer/render-markdown.nvim](https://dotfyle.com/plugins/MeanderingProgrammer/render-markdown.nvim)
++ [iamcco/markdown-preview.nvim](https://dotfyle.com/plugins/iamcco/markdown-preview.nvim)
+### motion
+
++ [sphamba/smear-cursor.nvim](https://dotfyle.com/plugins/sphamba/smear-cursor.nvim)
 ### nvim-dev
 
 + [nvim-lua/plenary.nvim](https://dotfyle.com/plugins/nvim-lua/plenary.nvim)
@@ -97,13 +102,14 @@ NVIM_APPNAME=ishanshre/My-Hyprland-dots/.config/nvim nvim
 + [folke/lazy.nvim](https://dotfyle.com/plugins/folke/lazy.nvim)
 ### snippet
 
-+ [L3MON4D3/LuaSnip](https://dotfyle.com/plugins/L3MON4D3/LuaSnip)
 + [rafamadriz/friendly-snippets](https://dotfyle.com/plugins/rafamadriz/friendly-snippets)
++ [L3MON4D3/LuaSnip](https://dotfyle.com/plugins/L3MON4D3/LuaSnip)
 ### startup
 
 + [goolord/alpha-nvim](https://dotfyle.com/plugins/goolord/alpha-nvim)
 ### statusline
 
++ [b0o/incline.nvim](https://dotfyle.com/plugins/b0o/incline.nvim)
 + [nvim-lualine/lualine.nvim](https://dotfyle.com/plugins/nvim-lualine/lualine.nvim)
 ### syntax
 
@@ -116,11 +122,13 @@ NVIM_APPNAME=ishanshre/My-Hyprland-dots/.config/nvim nvim
 + [akinsho/toggleterm.nvim](https://dotfyle.com/plugins/akinsho/toggleterm.nvim)
 ### utility
 
-+ [echasnovski/mini.nvim](https://dotfyle.com/plugins/echasnovski/mini.nvim)
-+ [rcarriga/nvim-notify](https://dotfyle.com/plugins/rcarriga/nvim-notify)
 + [folke/noice.nvim](https://dotfyle.com/plugins/folke/noice.nvim)
++ [rcarriga/nvim-notify](https://dotfyle.com/plugins/rcarriga/nvim-notify)
++ [echasnovski/mini.nvim](https://dotfyle.com/plugins/echasnovski/mini.nvim)
 ## Language Servers
 
 + html
-+ python
-+ rust
++ pylyzer
+
+
+ This readme was generated by [Dotfyle](https://dotfyle.com)
